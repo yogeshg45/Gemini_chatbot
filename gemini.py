@@ -11,13 +11,13 @@ import json
 import os
 
 # Configure Gemini
-genai.configure(api_key="AIzaSyBBjSELLLXtwbyV7KqklTHsLNnY-04PPco")
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
 llm = genai.GenerativeModel("models/gemini-2.5-flash-preview-05-20")
 
 # MongoDB setup
-mongo_uri = "mongodb+srv://mokhithraa2004:wfwsxhTK9x8TuKUW@cluster0.p5j2bi5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+mongo_uri = "your_mongodb_atlas_connection_uri"
 client = MongoClient(mongo_uri)
-collection = client["knowledge_base"]["Building_Rules"]
+collection = client["Your_Collection_name"]["Doc_name"]
 
 # FastAPI setup
 app = FastAPI()
@@ -261,3 +261,4 @@ async def get_ui():
 </body>
 </html>
 """
+
